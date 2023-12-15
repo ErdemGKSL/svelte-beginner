@@ -5,9 +5,7 @@
 </script>
 
 <button class="btn btn-primary" on:click={async () => {
-  const users = await fetch('https://api.thesis.com.tr/auth/login', {
-    method: "POST"
-  }).then((res) => res.json());
+  const users = await fetch('http://localhost:9876/users').then((res) => res.json());
   veri = users;
 }}>Veri Çek</button>
 <br>
